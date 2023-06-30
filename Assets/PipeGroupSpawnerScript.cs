@@ -26,9 +26,9 @@ public class PipeGroupSpawnerScript : MonoBehaviour {
         }
 
         // Cleanup invisible pipeGroups
-        while (containsInvisiblePipeGroup(pipeGroups)) {
-            Destroy(pipeGroups.Dequeue());
-        }
+        //while (containsInvisiblePipeGroup(pipeGroups)) {
+        //    Destroy(pipeGroups.Dequeue());
+        //}
     }
 
     private void InstantiatePipeGroup(GameObject pipeGroup, Queue<GameObject> pipeGroups) {
