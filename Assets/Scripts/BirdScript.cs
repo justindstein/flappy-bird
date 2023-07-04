@@ -18,7 +18,14 @@ public class BirdScript : MonoBehaviour {
         }
     }
 
+    // Collision with pipes
     private void OnCollisionEnter2D(Collision2D collision) {
+        this.logicManagerScript.activateGameOverScreen();
+        this.isAlive = false;
+    }
+
+    // Bird goes off-screen
+    public void OnBecameInvisible() {
         this.logicManagerScript.activateGameOverScreen();
         this.isAlive = false;
     }
@@ -26,4 +33,5 @@ public class BirdScript : MonoBehaviour {
     public bool IsAlive() {
         return this.isAlive;
     }
+
 }
