@@ -1,6 +1,7 @@
 using UnityEngine;
 
 public class PipeGroupScript : MonoBehaviour {
+
     public float moveSpeed;
     public bool isVisible;
 

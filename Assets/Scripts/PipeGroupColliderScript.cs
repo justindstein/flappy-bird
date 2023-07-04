@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PipeGroupColliderScript : MonoBehaviour {
+
     private LogicManagerScript logicManagerScript;
 
     // Start is called before the first frame update

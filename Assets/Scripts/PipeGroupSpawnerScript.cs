@@ -2,10 +2,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PipeGroupSpawnerScript : MonoBehaviour {
+
     public GameObject pipeGroup;
 
     private float spawnRate = 2;
     private float timer = 2;
+    private int deadZone = -6;
     private Queue<GameObject> pipeGroups;
 
     // Start is called before the first frame update
@@ -21,20 +23,23 @@ public class PipeGroupSpawnerScript : MonoBehaviour {
 
         // Spawn pipeGroup after enough deltaTime has elapsed
         if (getUpdatedTimer(Time.deltaTime) >= spawnRate) {
-            InstantiatePipeGroup(pipeGroup, pipeGroups);
+            GameObject instance = InstantiatePipeGroup(pipeGroup, pipeGroups);
+            Debug.Log(string.Format("Instantiated pipeGroup {0}", instance.GetInstanceID()));
             resetTimer();
         }
 
         // Cleanup invisible pipeGroups
-        //while (containsInvisiblePipeGroup(pipeGroups)) {
-        //    Destroy(pipeGroups.Dequeue());
-        //}
+        while (containsInvisiblePipeGroup(pipeGroups)) {
+            Debug.Log(string.Format("Destroying pipeGroup {0}", pipeGroups.Peek().GetInstanceID()));
+            Destroy(pipeGroups.Dequeue());
+        }
     }
 
-    private void InstantiatePipeGroup(GameObject pipeGroup, Queue<GameObject> pipeGroups) {
+    private GameObject InstantiatePipeGroup(GameObject pipeGroup, Queue<GameObject> pipeGroups) {
         GameObject instance = Instantiate(pipeGroup, transform.position + GetPositionWithHeightBetween(-1, 1), transform.rotation);
         instance.AddComponent<PipeGroupScript>();
         pipeGroups.Enqueue(instance);
+        return instance;
     }
 
     private void resetTimer() {
@@ -54,7 +59,7 @@ public class PipeGroupSpawnerScript : MonoBehaviour {
     private bool containsInvisiblePipeGroup(Queue<GameObject> pipeGroups) {
         return (pipeGroups.Count > 0)
             && (pipeGroups.Peek() != null)
-            && (pipeGroups.Peek().GetComponent<PipeGroupScript>().IsInvisible())
+            && (pipeGroups.Peek().transform.position.x < this.deadZone)
         ;
     }
 }
