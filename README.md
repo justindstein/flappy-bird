@@ -4,7 +4,7 @@ This project is a 'Flappy Bird' clone written using the Unity game engine. This 
 
 ### Gameplay Demo
 
-![flappy-bird-demo.gif](/flappy-bird-demo.gif)
+![flappy-bird-demo.gif](https://github.com/justindstein/flappy-bird/blob/main/flappy-bird-demo.gif)
 
 Alternatively, you can play the game on MacOS by extracting and running [macos-build.zip](/macos-build.zip).
 
