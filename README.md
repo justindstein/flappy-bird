@@ -1,6 +1,6 @@
 # flappy-bird
 
-This project is a 'Flappy Bird' clone written using the Unity game engine. This game was built primarily for self-educational purposes - but is supported on Linux/Windows/MacOS and is fully tested on MacOS.
+This project is a 'Flappy Bird' clone written using the Unity game engine. This game was built primarily for self-educational purposes with guidence from [this tutorial](https://www.youtube.com/watch?v=XtQMytORBmM).
 
 ### Gameplay Demo
 
