@@ -1,15 +1,21 @@
 # flappy-bird
 
-This project is a 'Flappy Bird' clone written using the Unity game engine. This game was built primarily for self-educational purposes with guidence from [this tutorial](https://www.youtube.com/watch?v=XtQMytORBmM).
+This project is a 'Flappy Bird' clone written using the Unity game engine. This game was built primarily for self-educational purposes with guidance from [this tutorial](https://www.youtube.com/watch?v=XtQMytORBmM).
+
+### Controls
+spacebar - Fly up 
+
+### Gameplay Features
+- Time your flight properly to traverse through the course, the further you go the higher your score!
+- But beware of pipes, they will block your path and hurt you if you hit them!
+- To learn more, visit this project's github page.
 
 ### Gameplay Demo
 
-![flappy-bird-demo.gif](https://github.com/justindstein/flappy-bird/blob/main/flappy-bird-demo.gif)
+Playable on [itch.io](https://justindstein.itch.io/flappy-bird).
 
-Alternatively, you can play the game on MacOS by extracting and running [macos-build.zip](/macos-build.zip).
+https://github.com/justindstein/flappy-bird/assets/11355547/c839c55d-4eaa-48b1-a613-c535881d4d8d
 
-### Build Setup
-1. [Install the Unity Hub and Editor.](https://learn.unity.com/tutorial/install-the-unity-hub-and-editor)
-1. [Import project into Unity Hub.](https://support.unity.com/hc/en-us/articles/4402520287124-How-do-I-add-a-project-saved-on-my-computer-into-the-Unity-Hub-)
-1. Open in Unity Hub with Unity version [2021.3.27f1](https://unity.com/releases/editor/whats-new/2021.3.27) and click 'run'.
+### License
 
+[MIT](./LICENSE).
